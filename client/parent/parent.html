@@ -1,0 +1,25 @@
+<template name="parent">
+	{{> child childIf=true }}
+	<br>
+	{{> childWith_Mixin childIf=true }}
+	<br>
+	{{> childWith_Function childIf=true }}
+	<br>
+	{{> childWith_MixinFunction childIf=true }}
+</template>
+
+<template name="child">
+	Child: {{ message }}
+</template>
+
+<template name="childWith_Mixin">
+	Child w/ Mixin: {{ message }}
+</template>
+
+<template name="childWith_Function">
+	Child w/ Function: {{ message }}
+</template>
+
+<template name="childWith_MixinFunction">
+	Child w/ Function Mixin: {{ message }}
+</template>
