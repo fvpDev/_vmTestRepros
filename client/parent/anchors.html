@@ -1,0 +1,13 @@
+<template name="anchors">
+	<a href="#" {{b "click: toggleLights"}}>Toggle the Lights</a>
+	<br>
+	<a {{b "style: styleStr"}}>
+		{{ innerText }} 1: Doesn't Work
+	</a>
+	<br>
+	<a style="{{ styleStr }}">
+		{{ innerText }} 2: Works
+	</a>
+	<br>
+	{{ styleStr }}
+</template>
