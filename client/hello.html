@@ -1,0 +1,24 @@
+<head>
+	<title>hello</title>
+</head>
+
+<template name="layout">
+	<h1>{{_ "hello"}}</h1>
+	{{> yield}}
+
+
+</template>
+
+<template name="hello">
+	<input placeholder="{{_ ' placeholder '}}" type="text" {{b "value: myText"}}/>
+	<button {{b "click: getText"}}>Test</button>
+	<br>
+	{{#each getItems}}
+		{{> item toLoad=this }}
+<!--
+		{{ this.text }}
+		{{ this.status }}
+		{{ this.person.name }}
+-->
+	{{/each}}
+</template>
